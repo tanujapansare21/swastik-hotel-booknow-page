@@ -7,10 +7,13 @@
 </head>
 <body>
     <link rel="stylesheet" href="style.css">
+    
+
     <form action="reservation.php" method="post">
         <div class="elem-group">
           <label for="name">Your Name</label>
-          <input type="text" id="name" name="visitor_name" placeholder="firstname surname" pattern=[A-Z\sa-z]{3,20} required>
+          <input type="text" id="name" name="visitor_name"  placeholder="firstname surname" pattern=[A-Z\sa-z]{3,20} required>
+         
         </div>
         <div class="elem-group">
           <label for="email">Your E-mail</label>
@@ -21,6 +24,9 @@
           <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
         </div>
         <hr>
+        <div class="elem-group"></div>
+          <label for="phone">Number of person</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="2" min="0" required>
         <div class="elem-group inlined">
           <label for="adult">Adults</label>
           <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
@@ -39,7 +45,7 @@
         </div>
         <div class="elem-group">
           <label for="room-selection">Select Room Preference</label>
-          <select id="room-selection" name="room_preference" required>
+          <select id="room-selection" name="room_preference" placeholder="Choose a Room from the List" required>
               <option value="">Choose a Room from the List</option>
               <option value="connecting">Connecting</option>
               <option value="adjoining">Adjoining</option>
